@@ -1,18 +1,11 @@
-# Monorepo
+# 教程
 
-## root/package.json
+1. 安装`nvm`: node version manager
+2. `nvm use stable`: 使用 LTS node
+3. `npm run initialize`: 初始化所有项目
+4. `npm run start:<app-name>`: app-name: hardware | city
 
-workspaces: 里面保存所有需要管理的项目[具有`package.json`的项目], 当子项目需要install/update的依赖, 只需要一条cli即可处理所有的package.json的依赖.
+## Conclusion
 
-# pnpm
-
--C <path> 指定路径运行pnpm.
--w 在根目录运行pnpm.
-
-# Lerna
-
-管理模式
-- 固定模式:执行lerna publish, 
-
-参考: https://bitbucket.org/letsdebugit/vite-monorepo-example/src/master/
-https://www.letsdebug.it/post/12-monorepo-with-vue-vite-lerna/
+- use `ts-node` to exec scripts shell is not recognize `ts` file extension
+  - delete `type:module` in `package.json`
