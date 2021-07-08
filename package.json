@@ -9,7 +9,7 @@
 		"packages/godzilla"
 	],
 	"scripts": {
-		"initialize": "tsc ./scripts/initialize.ts && ts-node ./scripts/initialize",
+		"gogo": "tsc ./scripts/initialize.ts && ts-node ./scripts/initialize",
 		"refresh": "lerna bootstrap",
 		"list": "lerna ls",
 		"build": "lerna run build --stream",
