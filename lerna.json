@@ -1,0 +1,16 @@
+{
+  "npmClient": "npm",
+  "version": "1.0.0",
+  "command": {
+    "publish": {},
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
+    }
+  },
+  "packages": [
+    "platform-apps/city-app",
+    "platform-apps/hardware-app"
+  ]
+}

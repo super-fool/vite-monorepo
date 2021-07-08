@@ -1,0 +1,26 @@
+{
+  "name": "keytop-monorepo",
+  "private": true,
+  "license": "ISC",
+  "workspaces": [
+    "platform-apps/city-app",
+    "platform-apps/hardware-app",
+    "packages/create-app",
+    "packages/godzilla"
+  ],
+  "scripts": {
+    "init:all": "npm install && npm run clean && lerna bootstrap",
+    "clean": "lerna clean --yes && lerna exec -- rm -rf dist",
+    "refresh": "lerna bootstrap",
+    "list": "lerna ls",
+    "build": "lerna run build --stream",
+    "build:city": "lerna run --stream --scope=@keytop-monorepo/hardware build",
+    "build:hardware": "lerna run build --stream --scope=@keytop-monorepo/hardware",
+    "dev:city": "lerna run --scope=@keytop-monorepo/hardware dev",
+    "dev:hardware": "lerna run --scope=@keytop-monorepo/hardware dev"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

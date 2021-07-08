@@ -1,0 +1,16 @@
+{
+  "name": "@keytop/create-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "keywords": [],
+  "author": "hyken",
+  "license": "ISC",
+  "dependencies": {
+    "element-china-area-data": "^5.0.2",
+    "element-ui": "^2.15.2"
+  }
+}
