@@ -1,0 +1,8 @@
+{
+  "name": "@maybach/components",
+  "version": "1.0.0",
+  "module": "src/index.js",
+  "scripts": {
+    "build": "vite build"
+  }
+}

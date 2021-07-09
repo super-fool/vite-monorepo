@@ -4,13 +4,12 @@
   "command": {
     "publish": {},
     "bootstrap": {
-      "npmClientArgs": [
-        "--no-package-lock"
-      ]
+      "npmClientArgs": []
     }
   },
   "packages": [
     "platform-apps/city-app",
-    "platform-apps/hardware-app"
+    "platform-apps/hardware-app",
+    "packages/Maybach"
   ]
 }
