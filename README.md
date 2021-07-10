@@ -9,3 +9,8 @@
 
 - use `ts-node` to exec scripts shell is not recognize `ts` file extension
   - delete `type:module` in `package.json`
+
+
+## IDE
+
+`VSCode + Vetur`. Make sure to enable `vetur.experimental.templateInterpolationService` in settings!

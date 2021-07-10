@@ -1,6 +1,6 @@
-import { createApp } from 'vue'
+import Vue from 'vue';
 import App from './App.vue'
-import { testFunction } from "@maybach/components";
 
-testFunction();
-createApp(App).mount('#app')
+new Vue({
+  render: h => h(App)
+}).$mount('#app');

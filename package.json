@@ -14,7 +14,7 @@
     "refresh": "lerna bootstrap",
     "list": "lerna ls",
     "build": "lerna run build --stream",
-    "build:city": "lerna run --stream --scope=@keytop-monorepo/city build",
+    "build:city": "lerna run --stream --scope @keytop-monorepo/city build ",
     "build:hardware": "lerna run --stream --scope=@keytop-monorepo/hardware build",
     "dev:city": "lerna run dev --scope @keytop-monorepo/city",
     "add": "lerna add @maybach/ui --scope=@keytop-monorepo/city",
@@ -27,6 +27,13 @@
     "sass": "^1.35.2",
     "vite": "^2.4.1",
     "vue-tsc": "^0.0.24",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.2",
+    "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "eslint": "^7.30.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "vite-plugin-vue2": "^1.7.2",
+    "vue-template-compiler": "^2.6.14",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.15.0"
   }
 }
