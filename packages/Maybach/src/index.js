@@ -1,4 +1,4 @@
-import ListPresenter from '../components/list-presenter'
+import ListPresenter from './components/list-presenter'
 
 export {
   ListPresenter,

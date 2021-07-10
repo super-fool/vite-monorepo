@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { ListPresenter } from "@maybach/components";
+import { ListPresenter } from "maybach";
 export default {
   name: "App",
   components: { ListPresenter },

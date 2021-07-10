@@ -20,6 +20,6 @@
     "moment": "^2.29.1",
     "qrcodejs2": "0.0.2",
     "vue2-countdown": "^1.0.8",
-    "@maybach/components": "*"
+    "maybach": "*"
   }
 }

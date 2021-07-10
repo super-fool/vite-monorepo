@@ -1,5 +1,5 @@
 {
-  "name": "@maybach/components",
+  "name": "maybach",
   "version": "1.0.0",
   "module": "src/index.js",
   "scripts": {
