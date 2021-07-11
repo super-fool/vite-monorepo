@@ -1,0 +1,9 @@
+{
+	"main": "index",
+	"exports": {
+		".": {
+			"default": "./index.js",
+			"require": "./index.js"
+		}
+	}
+}

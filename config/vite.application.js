@@ -1,14 +1,11 @@
-import vue from '@vitejs/plugin-vue'
+import { createVuePlugin } from "vite-plugin-vue2";
 
 /**
  * Build configuration for the application
  */
 export default {
-  plugins: [
-    vue()
-  ],
-
-  build: {
-    minify: 'eslint'
-  }
-}
+	plugins: [createVuePlugin()],
+	build: {
+		minify: "eslint",
+	},
+};
