@@ -1,9 +1,13 @@
 # 教程
 
-1. 安装`nvm`: node version manager
-2. `nvm use stable`: 使用 LTS node
-3. `npm run initialize`: 初始化所有项目
+1. install `nvm`: node version manager
+2. `nvm use stable`: use LTS node
+3. `npm run initialize`: initialize all projects
 4. `npm run start:<app-name>`: app-name: hardware | city
+
+## IDE
+
+`VSCode + Vetur`. Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
 
 ## Conclusion
 
