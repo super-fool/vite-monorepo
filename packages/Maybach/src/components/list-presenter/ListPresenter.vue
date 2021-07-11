@@ -1,9 +1,12 @@
 <template>
-  <button @click="onIncrease">{{ count }}</button>
+  <div>
+    <h2>Hi! {{ name }}</h2>
+    <button @click="onIncrease">{{ count }}</button>
+  </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Prop } from "vue-property-decorator";
 
 interface IListPresenter {
   count: number;
@@ -11,6 +14,7 @@ interface IListPresenter {
 
 @Component
 class ListPresenter<IListPresenter> extends Vue {
+  @Prop({ default: "hugo" }) name: string;
 
   private count = 0;
 

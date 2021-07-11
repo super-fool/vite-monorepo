@@ -1,5 +1,5 @@
 <template>
-  <ListPresenter />
+  <ListPresenter name="jack" />
 </template>
 
 <script lang="ts">
