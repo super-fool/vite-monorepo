@@ -20,6 +20,7 @@ export default ({ command, mode }) => {
             // target: "http://roadpark.keytop.cn:8101/", // 徐州
             target: "http://117.173.153.92:8101",
             ws: true,
+            cors: true,
             changeOrigin: true,
             rewrite: (path) => path.replace(/^\/api/, "/hardware-platform/")
           },

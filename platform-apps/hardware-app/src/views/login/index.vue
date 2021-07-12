@@ -132,74 +132,74 @@ export default {
     };
   },
   created() {
-    // if (window.localStorage.getItem("username")) {
-    //   this.loginForm.username = window.localStorage.getItem("username");
-    //   this.isSaveName = true;
-    // }
+    if (window.localStorage.getItem("username")) {
+      this.loginForm.username = window.localStorage.getItem("username");
+      this.isSaveName = true;
+    }
   },
   mounted() {
-    // this.getCheckCode();
-    // this.getConfig();
+    this.getCheckCode();
+    this.getConfig();
   },
-  // methods: {
-  //   getConfig() {
-  //     getConfig().then((res) => {
-  //       this.configData = res;
-  //     });
-  //   },
-  //   getCheckCode() {
-  //     getCheckCode().then((data) => {
-  //       const { img, uuid } = data;
-  //       this.codeUrl = "data:image/jpg;base64," + img;
-  //       this.loginForm.uuid = uuid;
-  //     });
-  //   },
-  //   submitForm() {
-  //     console.log(this.loginForm);
-  //     this.$refs["loginForm"].validate((valid) => {
-  //       if (valid) {
-  //         this.loginHandel();
-  //       }
-  //     });
-  //   },
-  //   loginHandel() {
-  //     authLogin(this.loginForm)
-  //       .then((data) => {
-  //         //this.$message.success('登录成功');
-  //         console.log(data);
-  //         this.loginSuccess = true;
-  //         const { token, user, firstLogin } = data;
-  //         this.$store.dispatch("user/setUserInfo", user);
-  //         window.localStorage.setItem("hcpToken", token);
-  //         if (firstLogin) {
-  //           this.step = 2;
-  //         } else if (user.user.adminFlag) {
-  //           this.$router.push("/MenuManage");
-  //         } else {
-  //           this.step = 3;
-  //         }
-  //       })
-  //       .finally(() => {
-  //         if (this.isSaveName) {
-  //           window.localStorage.setItem("username", this.loginForm.username);
-  //         } else {
-  //           window.localStorage.getItem("username") &&
-  //             localStorage.removeItem("username");
-  //         }
-  //         console.log(this.loginSuccess);
-  //         !this.loginSuccess && this.getCheckCode();
-  //         this.loginForm.code = "";
-  //       });
-  //   },
-  //   updatePwdSuccess() {
-  //     this.step = 3;
-  //   },
-  //   getUserInfo() {
-  //     getUserInfo().then((data) => {
-  //       console.log(data);
-  //     });
-  //   },
-  // },
+  methods: {
+    getConfig() {
+      getConfig().then((res) => {
+        this.configData = res;
+      });
+    },
+    getCheckCode() {
+      getCheckCode().then((data) => {
+        const { img, uuid } = data;
+        this.codeUrl = "data:image/jpg;base64," + img;
+        this.loginForm.uuid = uuid;
+      });
+    },
+    submitForm() {
+      console.log(this.loginForm);
+      this.$refs["loginForm"].validate((valid) => {
+        if (valid) {
+          this.loginHandel();
+        }
+      });
+    },
+    loginHandel() {
+      authLogin(this.loginForm)
+        .then((data) => {
+          //this.$message.success('登录成功');
+          console.log(data);
+          this.loginSuccess = true;
+          const { token, user, firstLogin } = data;
+          this.$store.dispatch("user/setUserInfo", user);
+          window.localStorage.setItem("hcpToken", token);
+          if (firstLogin) {
+            this.step = 2;
+          } else if (user.user.adminFlag) {
+            this.$router.push("/MenuManage");
+          } else {
+            this.step = 3;
+          }
+        })
+        .finally(() => {
+          if (this.isSaveName) {
+            window.localStorage.setItem("username", this.loginForm.username);
+          } else {
+            window.localStorage.getItem("username") &&
+              localStorage.removeItem("username");
+          }
+          console.log(this.loginSuccess);
+          !this.loginSuccess && this.getCheckCode();
+          this.loginForm.code = "";
+        });
+    },
+    updatePwdSuccess() {
+      this.step = 3;
+    },
+    getUserInfo() {
+      getUserInfo().then((data) => {
+        console.log(data);
+      });
+    },
+  },
 };
 </script>
 

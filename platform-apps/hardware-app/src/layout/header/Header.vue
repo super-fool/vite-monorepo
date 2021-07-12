@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import SvgIcon from "@/components/SvgIcon";
+import SvgIcon from "@/components/SvgIcon.vue";
 import { mapGetters } from "vuex";
 export default {
   name: "SideNav",

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import SvgIcon from "@/components/SvgIcon";
+import SvgIcon from "@/components/SvgIcon.vue";
 import MenuItem from "./MenuItem.vue";
 export default {
   name: "Header",

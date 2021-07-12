@@ -28,9 +28,9 @@ export default {
   },
   name: "Layout",
   components: {
-    TagsView,
+    // TagsView,
     Header,
-    Sidebar,
+    SideNav,
     AppMain,
   },
   computed: {

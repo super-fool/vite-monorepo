@@ -50,7 +50,7 @@ const actions = {
   },
 };
 
-export default {
+export const tagsView = {
   namespaced: true,
   state,
   mutations,

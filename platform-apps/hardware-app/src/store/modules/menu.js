@@ -41,7 +41,7 @@ const actions = {
   }
 };
 
-export default {
+export const menu = {
   namespaced: true,
   state,
   mutations,

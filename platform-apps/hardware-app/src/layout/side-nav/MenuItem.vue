@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import SvgIcon from "@/components/SvgIcon";
+import SvgIcon from "@/components/SvgIcon.vue";
 import SubMenuItem from "./SubMenuItem.vue";
 export default {
   naem: "MenuItem",
