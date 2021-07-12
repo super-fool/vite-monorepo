@@ -32,3 +32,8 @@ class HelloClassComponent extends Vue {}
 
 - import is invalid in `vite.config.js`, if import other directory
   -  you need to create a file `package.json` in directory which is imported file root.
+
+
+## refer
+vite config 详解: https://github.com/Asarua/vite2-config-description/blob/master/vite.config.ts
+ts config 详解: https://lq782655835.github.io/blogs/project/ts-tsconfig.html
