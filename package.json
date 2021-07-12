@@ -18,7 +18,8 @@
 		"build:hardware": "lerna run --stream --scope=@keytop-monorepo/hardware build",
 		"dev:city": "lerna run dev --stream --scope @keytop-monorepo/city",
 		"add": "lerna add @maybach/ui --scope=@keytop-monorepo/city",
-		"gogo": "npm install && node ./scripts/initialize.js"
+		"gogo": "npm install && node ./scripts/initialize.js",
+		"commitlint": "commitlint --edit"
 	},
 	"dependencies": {
 		"lerna": "^4.0.0",
