@@ -1,0 +1,104 @@
+{
+  "queryFields": [
+    {
+      "fieldName": "cameraCode",
+      "displayName": "相机编号",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "cameraStatus",
+      "displayName": "设备状态",
+      "description": "",
+      "type": "Refer",
+      "refer": "CameraStatus"
+    },
+    {
+      "fieldName": "bindingFlag",
+      "displayName": "是否绑定车位",
+      "description": "",
+      "type": "Refer",
+      "refer": "BindingFlag"
+    },
+    {
+      "fieldName": "bindingRoad",
+      "displayName": "绑定路段",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "bindingParkspace",
+      "displayName": "绑定车位",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "cameraPattern",
+      "displayName": "相机模式",
+      "description": "",
+      "type": "Refer",
+      "refer": "CameraPattern"
+    },
+    {
+      "fieldName": "cameraType",
+      "displayName": "设备类型",
+      "description": "",
+      "type": "Refer",
+      "refer": "CameraType"
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "cameraType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "CameraType"
+    },
+    {
+      "fieldName": "cameraCode",
+      "displayName": "相机编号",
+      "type": "String"
+    },
+    {
+      "fieldName": "cameraVersion",
+      "displayName": "设备版本号",
+      "type": "String"
+    },
+    {
+      "fieldName": "cameraStatus",
+      "displayName": "设备状态",
+      "type": "Refer",
+      "refer": "CameraStatus"
+    },
+    {
+      "fieldName": "cameraPattern",
+      "displayName": "相机模式",
+      "type": "Refer",
+      "refer": "CameraPattern"
+    },
+    {
+      "fieldName": "bindingFlag",
+      "displayName": "是否绑定车位",
+      "type": "Refer",
+      "refer": "BindingFlag"
+    },
+    {
+      "fieldName": "bindingNum",
+      "displayName": "绑定车位数量",
+      "type": "String"
+    },
+    {
+      "fieldName": "roadParkspace",
+      "displayName": "绑定路段及车位",
+      "type": "String"
+    }
+  ],
+  "customFields": [
+  ],
+  "rowAction": {
+    "description": "config object"
+  }
+}

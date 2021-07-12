@@ -1,0 +1,116 @@
+{
+  "queryFields": [
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "imei",
+      "displayName": "IMEI",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "parkspaceNo",
+      "displayName": "绑定车位",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "pushResult",
+      "displayName": "返回第三方结果",
+      "description": "",
+      "type": "Refer",
+      "refer": "pushResult"
+    },
+    {
+      "fieldName": "eventTimeBegin",
+      "startTime": "eventTimeBegin",
+      "endTime": "eventTimeEnd",
+      "displayName": "业务时间",
+      "description": "",
+      "defaultDate": "now",
+      "DateFormate": "YYYY-MM-DD HH:mm:ss",
+      "type": "RangeDate"
+    },
+    {
+      "fieldName": "pushTimeBegin",
+      "startTime": "pushTimeBegin",
+      "endTime": "pushTimeEnd",
+      "displayName": "发送时间",
+      "description": "",
+      "DateFormate": "YYYY-MM-DD HH:mm:ss",
+      "type": "RangeDate"
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "type": "String"
+    },
+    {
+      "fieldName": "pushTime",
+      "displayName": "发送第三方时间",
+      "type": "Date"
+    },
+    {
+      "fieldName": "deviceType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "DeviceType"
+    },
+    {
+      "fieldName": "imei",
+      "displayName": "IMEI",
+      "type": "String"
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "type": "String"
+    },
+    {
+      "fieldName": "parkspaceNo",
+      "displayName": "绑定车位",
+      "type": "String"
+    },
+    {
+      "fieldName": "pushType",
+      "displayName": "事件类型",
+      "type": "Refer",
+      "refer": "PushType"
+    },
+    {
+      "fieldName": "pushResult",
+      "displayName": "第三方返回结果",
+      "type": "Refer",
+      "refer": "NbiotPushResult"
+    },
+    {
+      "fieldName": "eventTime",
+      "displayName": "业务时间",
+      "type": "String"
+    }
+  ],
+  "customFields": [
+    "originalInfo",
+    "roadName",
+    "pushSource"
+  ],
+  "rowAction": {
+    "description": "config object"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "queryFields": [
+    {
+      "fieldName": "cameraCode",
+      "displayName": "相机编号",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "parkspaceCode",
+      "displayName": "绑定车位",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "cameraPlateNum",
+      "displayName": "识别车牌",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "cameraEventType",
+      "displayName": "事件类型",
+      "type": "Refer",
+      "refer": "CameraEventType"
+    },
+    {
+      "fieldName": "cameraLogTimeBegin",
+      "startTime": "cameraLogTimeBegin",
+      "endTime": "cameraLogTimeEnd",
+      "displayName": "业务时间",
+      "description": "",
+      "defaultDate": "now",
+      "DateFormate": "YYYY-MM-DD HH:mm:ss",
+      "type": "RangeDate"
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "id",
+      "displayName": "日志ID",
+      "type": "String"
+    },
+    {
+      "fieldName": "cameraLogTime",
+      "displayName": "业务时间",
+      "type": "Date"
+    },
+    {
+      "fieldName": "cameraCode",
+      "displayName": "相机编号",
+      "type": "String"
+    },
+    {
+      "fieldName": "cameraEventType",
+      "displayName": "事件类型",
+      "type": "Refer",
+      "refer": "CameraEventType"
+    },
+    {
+      "fieldName": "cameraType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "CameraType"
+    },
+    {
+      "fieldName": "cameraPlateNum",
+      "displayName": "相机识别车牌",
+      "type": "String"
+    },
+    {
+      "fieldName": "plateReliability",
+      "displayName": "车牌可信度",
+      "type": "String"
+    },
+    {
+      "fieldName": "eventReliability",
+      "displayName": "车位可信度",
+      "type": "String"
+    },
+    {
+      "fieldName": "finishedFlag",
+      "displayName": "是否完结",
+      "type": "Refer",
+      "refer": "FinishedFlag"
+    },
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "type": "String"
+    },
+    {
+      "fieldName": "opppsideEventId",
+      "displayName": "对应事件ID",
+      "refer": "String"
+    },
+    {
+      "fieldName": "bindingRoadAndSpace",
+      "displayName": "绑定路段及车位",
+      "type": "String"
+    },
+    {
+      "fieldName": "originalInfo",
+      "displayName": "接收日志内容",
+      "type": "Custom"
+    }
+  ],
+  "customFields": [
+    "originalInfo",
+    "roadName"
+  ]
+}

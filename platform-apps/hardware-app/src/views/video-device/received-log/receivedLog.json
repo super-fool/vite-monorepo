@@ -1,0 +1,131 @@
+{
+  "queryFields": [
+    {
+      "fieldName": "deviceCode",
+      "displayName": "设备编号",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "parkspaceNo",
+      "displayName": "绑定车位",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "plate",
+      "displayName": "识别车牌",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "carState",
+      "displayName": "事件类型",
+      "isMultiSelect": true,
+      "type": "Refer",
+      "refer": "DeviceCarStatus"
+    },
+    {
+      "fieldName": "businessTimeBegin",
+      "startTime": "businessTimeBegin",
+      "endTime": "businessTimeEnd",
+      "displayName": "业务时间",
+      "description": "",
+      "defaultDate": "now",
+      "DateFormate": "YYYY-MM-DD HH:mm:ss",
+      "type": "RangeDate"
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "id",
+      "displayName": "日志ID",
+      "type": "String",
+      "isEdit": "Boolean",
+      "editCell": "sth component",
+      "width": "Number",
+      "isFixed": "Boolean"
+    },
+    {
+      "fieldName": "deviceCode",
+      "displayName": "设备编号",
+      "type": "String"
+    },
+    {
+      "fieldName": "deviceType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "DeviceType"
+    },
+    {
+      "fieldName": "businessTime",
+      "displayName": "业务时间",
+      "type": "Date"
+    },
+    {
+      "fieldName": "carState",
+      "displayName": "事件类型",
+      "type": "Refer",
+      "refer": "DeviceCarStatus"
+    },
+    {
+      "fieldName": "plate",
+      "displayName": "识别车牌",
+      "type": "String"
+    },
+    {
+      "fieldName": "plateReliability",
+      "displayName": "车牌可信度",
+      "type": "Number"
+    },
+    {
+      "fieldName": "carStateReliability",
+      "displayName": "车位状态可信度",
+      "type": "String"
+    },
+    {
+      "fieldName": "finishedFlag",
+      "displayName": "是否完结",
+      "refer": "FinishedFlag",
+      "type": "Refer"
+    },
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "type": "String"
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段及车位",
+      "type": "Custom"
+    },
+    {
+      "fieldName": "originalInfo",
+      "displayName": "接收日志内容",
+      "type": "Custom",
+      "width": "Number",
+      "isFixed": true
+    }
+  ],
+  "customFields": [
+    "originalInfo",
+    "roadName"
+  ]
+}

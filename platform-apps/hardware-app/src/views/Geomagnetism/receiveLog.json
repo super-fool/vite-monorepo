@@ -1,0 +1,112 @@
+{
+  "queryFields": [
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "imei",
+      "displayName": "IMEI",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "parkspaceNo",
+      "displayName": "绑定车位",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "type",
+      "displayName": "指令类型",
+      "description": "",
+      "type": "Refer",
+      "refer": "IotCommandType"
+    },
+    {
+      "fieldName": "pushStatus",
+      "displayName": "是否转发",
+      "description": "",
+      "type": "Refer",
+      "refer": "IotPushStatus"
+    },
+    {
+      "fieldName": "eventTimeBegin",
+      "startTime": "eventTimeBegin",
+      "endTime": "eventTimeEnd",
+      "displayName": "业务时间",
+      "description": "",
+      "defaultDate": "now",
+      "DateFormate": "YYYY-MM-DD HH:mm:ss",
+      "type": "RangeDate"
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "type": "String"
+    },
+    {
+      "fieldName": "deviceType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "DeviceType"
+    },
+    {
+      "fieldName": "imei",
+      "displayName": "IMEI",
+      "type": "String"
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "type": "String"
+    },
+    {
+      "fieldName": "parkspaceNo",
+      "displayName": "绑定车位",
+      "type": "String"
+    },
+    {
+      "fieldName": "type",
+      "displayName": "接收指令类型",
+      "type": "Refer",
+      "refer": "IotCommandType"
+    },
+    {
+      "fieldName": "eventTime",
+      "displayName": "业务时间",
+      "type": "String"
+    },
+    {
+      "fieldName": "content",
+      "displayName": "接收指令内容",
+      "type": "Custom"
+    },
+    {
+      "fieldName": "pushStatus",
+      "displayName": "是否转发",
+      "type": "Custom"
+    }
+  ],
+  "customFields": [
+    "content",
+    "pushStatus"
+  ],
+  "rowAction": {
+    "description": "config object"
+  }
+}

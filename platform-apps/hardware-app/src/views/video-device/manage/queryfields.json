@@ -1,0 +1,99 @@
+{
+  "queryData": {
+    "deviceCode": "",
+    "deviceStatus": null,
+    "bindingFlag": 0,
+    "roadName": "",
+    "packspaceCode": ""
+  },
+  "queryFields": [
+    {
+      "fieldName": "deviceCode",
+      "displayName": "设备编号",
+      "description": "",
+      "type": "String",
+      "isRefer": false,
+      "refer": ""
+    },
+    {
+      "fieldName": "deviceStatus",
+      "displayName": "设备状态",
+      "description": "",
+      "type": "Refer",
+      "isRefer": true,
+      "refer": "CameraStatus"
+    },
+    {
+      "fieldName": "bindingFlag",
+      "displayName": "是否绑定车位",
+      "description": "",
+      "type": "Refer",
+      "isRefer": true,
+      "refer": "BindingFlag"
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段",
+      "description": "",
+      "type": "String",
+      "isRefer": false,
+      "refer": ""
+    },
+    {
+      "fieldName": "parkspaceNo",
+      "displayName": "绑定车位",
+      "description": "",
+      "type": "String",
+      "isRefer": false,
+      "refer": ""
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "deviceBrand",
+      "displayName": "品牌",
+      "type": "Refer",
+      "refer": "DeviceBrand"
+    },
+    {
+      "fieldName": "deviceType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "DeviceType",
+      "isEdit": "Boolean",
+      "editCell": "sth component",
+      "width": "Number",
+      "isFixed": "Boolean"
+    },
+    {
+      "fieldName": "deviceCode",
+      "displayName": "设备编号",
+      "type": "String"
+    },
+    {
+      "fieldName": "deviceVersion",
+      "displayName": "设备版本号",
+      "type": "String"
+    },
+    {
+      "fieldName": "deviceStatus",
+      "displayName": "设备状态",
+      "type": "Refer",
+      "refer": "DeviceStatus"
+    },
+    {
+      "fieldName": "bindingFlag",
+      "displayName": "是否绑定车位",
+      "type": "Refer",
+      "refer": "BindingFlag"
+    },
+    {
+      "fieldName": "roadName",
+      "displayName": "绑定路段及车位",
+      "type": "Custom"
+    }
+  ],
+  "customFields": [
+    "roadName"
+  ]
+}

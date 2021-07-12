@@ -1,0 +1,116 @@
+{
+  "queryFields": [
+    {
+      "fieldName": "beginTime",
+      "startTime": "beginTime",
+      "endTime": "endTime",
+      "displayName": "业务时间",
+      "description": "",
+      "defaultDate": "now",
+      "DateFormate": "YYYY-MM-DD HH:mm:ss",
+      "type": "RangeDate"
+    },
+    {
+      "fieldName": "cameraCode",
+      "displayName": "相机编号",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "cameraPlateNum",
+      "displayName": "相机识别车牌",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "auditPerson",
+      "displayName": "审核人",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    },
+    {
+      "fieldName": "cameraType",
+      "displayName": "设备类型",
+      "description": "",
+      "type": "Refer",
+      "refer": "CameraType"
+    },
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "description": "",
+      "type": "String",
+      "refer": ""
+    }
+  ],
+  "listFields": [
+    {
+      "fieldName": "eventId",
+      "displayName": "事件ID",
+      "type": "String"
+    },
+    {
+      "fieldName": "businessTime",
+      "displayName": "业务时间",
+      "type": "Date"
+    },
+    {
+      "fieldName": "cameraCode",
+      "displayName": "相机编号",
+      "type": "String"
+    },
+    {
+      "fieldName": "cameraEventType",
+      "displayName": "事件类型",
+      "type": "Refer",
+      "refer": "CameraEventType"
+    },
+    {
+      "fieldName": "cameraType",
+      "displayName": "设备类型",
+      "type": "Refer",
+      "refer": "CameraType"
+    },
+    {
+      "fieldName": "cameraPlateNum",
+      "displayName": "相机识别车牌",
+      "type": "String"
+    },
+    {
+      "fieldName": "pushPlateNum",
+      "displayName": "推送车牌",
+      "type": "String"
+    },
+    {
+      "fieldName": "auditResult",
+      "displayName": "审核结果",
+      "type": "Refer",
+      "refer": "AgentAuditResult"
+    },
+    {
+      "fieldName": "auditPerson",
+      "displayName": "审核人",
+      "refer": "String"
+    },
+    {
+      "fieldName": "auditTime",
+      "displayName": "完成审核时间",
+      "type": "String"
+    },
+    {
+      "fieldName": "eventSource",
+      "displayName": "事件来源",
+      "type": "Refer",
+      "refer": "EventSource"
+    },
+    {
+      "fieldName": "remark",
+      "displayName": "原因",
+      "type": "String"
+    }
+  ],
+  "customFields": []
+}
