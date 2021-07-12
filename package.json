@@ -17,6 +17,7 @@
 		"build:city": "lerna run --stream --scope @keytop-monorepo/city build ",
 		"build:hardware": "lerna run --stream --scope=@keytop-monorepo/hardware build",
 		"dev:city": "lerna run dev --stream --scope @keytop-monorepo/city",
+		"dev:hardware": "lerna run dev --stream --scope @keytop-monorepo/hardware",
 		"add": "lerna add @maybach/ui --scope=@keytop-monorepo/city",
 		"gogo": "npm install && node ./scripts/initialize.js",
 		"commitlint": "commitlint --edit"
@@ -47,6 +48,7 @@
 		"vite": "~2.3.0",
 		"vite-plugin-vue2": "^1.7.2",
 		"vue-template-compiler": "^2.6.14",
-		"vue-tsc": "^0.0.24"
+		"vue-tsc": "^0.0.24",
+		"less": "^4.1.1"
 	}
 }

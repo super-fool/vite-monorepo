@@ -4,11 +4,9 @@ import commonConfiguration from './vite.common'
 import serverConfiguration from './vite.server'
 import clientConfiguration from './vite.client'
 import applicationConfiguration from './vite.application'
-const pkg = require(path.resolve(__dirname, 'package.json'))
 
-export const test = () => {
-  console.log('test')
-}
+
+const pkg = require(path.resolve(__dirname, 'package.json'))
 
 /**
  * Returns Vite build configuration for common (isomorphic) packages,

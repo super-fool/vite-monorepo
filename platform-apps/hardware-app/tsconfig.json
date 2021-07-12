@@ -2,13 +2,31 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
+    "noImplicitAny": true,
     "moduleResolution": "node",
-    "strict": true,
+    "removeComments": true,
+    "declaration": false,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": [
+      "esnext",
+      "dom"
+    ],
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "plugins": [
+    {
+      "name": "@vuedx/typescript-plugin-vue"
+    },
+    {
+      "name": "eslint-plugin-vue"
+    }
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.d.ts",
+    "src/**/*.vue"
+  ]
 }
