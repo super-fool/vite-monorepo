@@ -1,9 +1,6 @@
 <template>
   <div class="tab-container">
-    <div class="keytop-logo">
-      <span>硬件云平台</span>
-      <span class="search-separate"></span>
-    </div>
+    <span class="keytop-logo"> 硬件云平台 </span>
     <ul class="tab-nav-region">
       <li
         v-for="({ component, name }, index) in naviStacks"
@@ -18,11 +15,12 @@
     </ul>
     <div class="tab-info-region">
       <div class="tab-info-search">
-        <input class="search-input" placeholder="您需要什么, 请告诉我" />
+        <input class="search-input" placeholder="请选择车场" />
         <span class="search-separate"></span>
-        <SvgIcon class="search-icon" icon="icon-chaxun" />
+        <SvgIcon class="search-icon" icon="jiantou1" />
       </div>
       <el-popover
+        class="tab-info-tip"
         placement="top-start"
         title="标题"
         width="200"
@@ -39,33 +37,38 @@
 </template>
 
 <script lang="ts">
-import SvgIcon from "@/components/SvgIcon";
-
+import SvgIcon from "../../svg-icon/SvgIcon.vue";
 import { Vue, Component, Prop, Watch } from "vue-property-decorator";
-
+import { Route } from "vue-router";
 @Component({
   components: { SvgIcon },
 })
-@Component
 class SideNav extends Vue {
-  private activeRouteName: String;
 
-  @Watch("$route")
-  onRouteChange(newRoute: ) {
+  private activeRouteName: string | null | undefined = "";
+  private route: Route = null;
+  private naviStacks: any = this.$store.state.naviStacks;
+
+  constructor() {
+    super();
+    console.log(this.$route);
+    console.log(this.$store);
+    this.route = this.$route;
+  }
+
+  @Watch("route")
+  onRouteChange(newRoute: Route) {
     const { name } = newRoute;
     this.activeRouteName = name;
   }
 
   openActiveRoute(component) {
-    console.log(component);
     this.$router.replace({ name: component.name });
   }
 
   getRouteComponents() {
     const components = [];
-    this.$store.state.naviStacks.stacks.forEach((val) =>
-      components.push(val[val.length - 1])
-    );
+    naviStacks.stacks.forEach((val) => components.push(val[val.length - 1]));
     return components;
   }
 }
@@ -75,26 +78,29 @@ export default SideNav;
 
 <style lang="less" scoped>
 .tab-container {
-  background: #fff;
-  height: 48px;
+  background-color: #0074ff;
+  height: 64px;
   overflow: hidden;
-  border-bottom: 1px solid #eaeaea;
   display: flex;
   margin-bottom: 16px;
-  box-shadow: 0 2px 5px 1px #95c9fd;
+  box-shadow: 0 2px 5px 1px #0074ff;
 }
 .keytop-logo {
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 24px;
+  margin-left: 24px;
   height: 100%;
   display: flex;
   align-items: center;
-  & > span {
-    margin: auto 8px;
-  }
 }
 .tab-nav-region {
   flex: 1;
   display: flex;
   flex-direction: row;
+  background-color: #ffffff;
+  margin: 12px 20px;
+  border-radius: 4px;
   align-items: flex-end;
   & > .tab-title {
     cursor: pointer;
@@ -120,14 +126,15 @@ export default SideNav;
   display: flex;
   align-items: center;
   flex-direction: row;
+  margin: 12px;
+  min-width: 400px;
   & .tab-info-search {
-    height: 28px;
+    background-color: #ffffff;
     flex: 1;
     display: flex;
     align-items: center;
-    border: 1px solid #b4bccc;
-    border-radius: 16px;
-    margin-right: 16px;
+    border-radius: 4px;
+    height: 100%;
     & .search-input {
       margin-left: 16px;
       outline-style: none;
@@ -143,6 +150,9 @@ export default SideNav;
       widows: 20px;
       color: #409eff;
     }
+  }
+  & .tab-info-tip {
+    margin: 0 40px
   }
 }
 .search-separate {

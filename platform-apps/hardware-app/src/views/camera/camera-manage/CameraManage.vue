@@ -33,8 +33,8 @@
 import ListPresenter from "@solution/list-solution";
 import fields from "./cameraManage.json";
 import * as api from "@/api/cameraManage";
-import editDialog from "./components/editDialog";
-import addHightDialog from "./components/addHightDialog";
+import editDialog from "./components/editDialog.vue";
+import addHightDialog from "./components/addHightDialog.vue";
 
 export default {
   components: { ListPresenter, editDialog, addHightDialog },

@@ -48,7 +48,7 @@ export default {
         parkId: this.parkId
       }).then(() => {
         this.saveParkLot(this.parkId);
-        this.$router.replace({
+        this.$router.push({
           name: "CameraManage"
         });
       });

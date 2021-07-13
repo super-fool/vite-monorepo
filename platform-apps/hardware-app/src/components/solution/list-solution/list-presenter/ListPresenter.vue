@@ -61,9 +61,9 @@
 </template>
 
 <script>
-import ListPage from "../list-page/ListPage";
-import QueryForm from "../query-form/QueryForm";
-import ToolBar from "../tool-bar/ToolBar";
+import ListPage from "../list-page/ListPage.vue";
+import QueryForm from "../query-form/QueryForm.vue";
+import ToolBar from "../tool-bar/ToolBar.vue";
 import request from "@/utils/request";
 import { clone } from "lodash";
 export default {

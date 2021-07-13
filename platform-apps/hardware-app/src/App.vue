@@ -10,6 +10,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang='less'>
+@import "maybach/src/style/default.less";
 </style>
 

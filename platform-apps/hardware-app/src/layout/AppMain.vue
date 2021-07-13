@@ -15,17 +15,17 @@
 import * as api from "@/api/dic";
 export default {
   name: "AppMain",
-	provide() {
+  provide() {
     return {
       reload: this.reload,
-			changeExcludeArr:this.changeExcludeArr
-    }
+      changeExcludeArr: this.changeExcludeArr,
+    };
   },
   computed: {
     cachedViews() {
-      return this.$store.state.tagsView.visitedViews.map(v=>{
-        return v.meta.name
-      })
+      return this.$store.state.tagsView.visitedViews.map((v) => {
+        return v.meta.name;
+      });
       // return "";
     },
     // notCachedViews() {
@@ -36,12 +36,12 @@ export default {
       return this.$route.path;
     },
   },
-	data(){
-		return {
-			isShow:true,
-			excludeArr:['audit-list','on-site-inspection','audit-detail']
-		}
-	},
+  data() {
+    return {
+      isShow: true,
+      excludeArr: ["audit-list", "on-site-inspection", "audit-detail"],
+    };
+  },
   mounted() {
     api.getDic().then((res) => {
       if (res) {
@@ -49,23 +49,23 @@ export default {
       }
     });
   },
-	methods:{
-		reload(){
-			this.isShow = false
+  methods: {
+    reload() {
+      this.isShow = false;
       this.$nextTick(() => {
-        this.isShow = true
-      })
-		},
-		changeExcludeArr(v,action){
-			if(action === 'add'){
-				this.excludeArr.push(v)
-			}else if(action === 'reduce'){
-				this.excludeArr = this.excludeArr.filter(exclude=>{
-					return exclude !==v
-				})
-			}
-		}
-	}
+        this.isShow = true;
+      });
+    },
+    changeExcludeArr(v, action) {
+      if (action === "add") {
+        this.excludeArr.push(v);
+      } else if (action === "reduce") {
+        this.excludeArr = this.excludeArr.filter((exclude) => {
+          return exclude !== v;
+        });
+      }
+    },
+  },
 };
 </script>
 
@@ -75,11 +75,8 @@ export default {
   flex-direction: column;
   position: relative;
   box-sizing: border-box;
-  height: calc(100% - 90px);
-  // margin: 0 15px;
-  // background-color: #ffffff;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: 100%;
+  overflow: auto;
 }
 /* fade-transform */
 .fade-transform-leave-active,

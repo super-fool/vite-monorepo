@@ -2,17 +2,13 @@
   <div class="menu-item">
     <div class="menu-group" @click="onOpenSubItem">
       <span>{{ menu.menuName }}</span>
-      <template v-if="menu.childMenus.length > 0">
+      <template v-if="true">
         <SvgIcon
           v-if="!isCollapse"
           class="menu-item-icon"
           icon="jiantouarrow486"
         />
-        <SvgIcon
-          v-if="isCollapse"
-          class="menu-item-icon"
-          icon="jiantouarrow492"
-        />
+        <SvgIcon v-else class="menu-item-icon" icon="jiantouarrow492" />
       </template>
     </div>
     <transition name="collapse-menus">
@@ -25,7 +21,7 @@
 </template>
 
 <script>
-import SvgIcon from "@/components/SvgIcon";
+import SvgIcon from "@/components/SvgIcon.vue";
 import SubMenuItem from "./SubMenuItem.vue";
 export default {
   naem: "MenuItem",
@@ -53,9 +49,8 @@ export default {
 <style lang="less" scoped>
 .menu-item {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
   & > .menu-group {
     width: 100%;
     display: flex;

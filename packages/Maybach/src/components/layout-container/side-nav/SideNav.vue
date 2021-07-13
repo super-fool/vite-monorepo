@@ -1,8 +1,8 @@
 <template>
   <div class="st-container">
     <div
-      class="fixed-menu"
       :class="{ active: hover }"
+      class="fixed-menu"
       @mouseover="hover = true"
       @mouseleave="hover = false"
     >
@@ -17,10 +17,10 @@
 </template>
 
 <script>
-import SvgIcon from "@/components/SvgIcon";
+import SvgIcon from "@/components/SvgIcon.vue";
 import MenuItem from "./MenuItem.vue";
 export default {
-  name: "Header",
+  name: "SideNav",
   components: { SvgIcon, MenuItem },
   props: {
     menus: {
@@ -45,9 +45,9 @@ export default {
 }
 
 .fixed-menu {
-  background-color: #5994d0;
+  background-color: #2689ff;
   position: fixed;
-  top: 49px;
+  top: 62px;
   min-width: 46px;
   padding-right: 8px;
   left: 0;
@@ -57,7 +57,7 @@ export default {
   transition: min-width 0.3s cubic-bezier(0.24, 0.55, 0.51, 1.07);
 }
 .fixed-menu:hover {
-  min-width: 160px;
+  min-width: 200px;
 }
 
 .nav-container {

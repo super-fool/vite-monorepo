@@ -31,10 +31,11 @@ export default {
 
 <style lang="less" scoped>
 .sub-menu {
-  margin-left: -20px;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
   & > &-item {
-    margin: 16px 0;
+    margin-top: 16px;
   }
   & > &-item:hover {
     color: aqua;

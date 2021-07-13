@@ -27,6 +27,11 @@ class HelloClassComponent extends Vue {}
 
 1. 使用 husky commit-msg 添加了 [commitlint](https://github.com/conventional-changelog/commitlint), 在文档中使用了`npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'`, 这里不知道为什么无法执行npx. 所以我直接在package.json中添加了`commitlint`脚本, 在husky中直接调用了`npm run commitlint`.
 
+
+## 7-14
+
+1. class 中的属性需要默认值.
+参考: https://stackoverflow.com/questions/49699067/property-has-no-initializer-and-is-not-definitely-assigned-in-the-construc
 ## Conclusion
 
 - use `ts-node` to exec scripts shell is not recognize `ts` file extension

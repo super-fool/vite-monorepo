@@ -12,9 +12,6 @@ import moment from 'moment';
 import router from './router';
 import ElementUI from 'element-ui';
 
-
-import 'maybach/src/style/default.less';
-
 Vue.use(VueRouter);
 
 

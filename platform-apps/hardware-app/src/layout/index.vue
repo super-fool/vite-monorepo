@@ -1,40 +1,27 @@
 <template>
-  <div class="app-wrapper">
-    <Header v-if="fullLayout" />
-    <SideNav :menus="menus" />
-    <!-- <Sidebar></Sidebar> -->
-    <div class="main-container" :class="{ 'admin-box': isAdmin }">
-      <!-- <div v-if="!isAdmin">
-        <TagsView />
-      </div> -->
-      <AppMain />
-    </div>
-  </div>
+  <Layout :menus="menus">
+    <AppMain />
+  </Layout>
 </template>
 
 <script>
-// import TagsView from "./components/TagsView/index";
-// import Header from "./components/Header";
-// import Sidebar from "./components/Sidebar";
-import AppMain from "./components/AppMain.vue";
-import Header from "./header/Header.vue";
-import SideNav from "./side-nav/SideNav.vue";
+import { Layout } from "maybach";
+import AppMain from "./AppMain.vue";
 import { getMenuTree } from "@/api/menuManage";
-// import * as vx from "vuex";
-
+import * as vx from "vuex";
 export default {
-  data() {
-    return {};
-  },
-  name: "Layout",
+  name: "Container",
   components: {
-    // TagsView,
-    Header,
-    SideNav,
+    Layout,
     AppMain,
   },
   computed: {
-    // ...vx.mapGetters(["isAdmin", "fullLayout"]),
+    ...vx.mapGetters(["userParkId"]),
+  },
+  data() {
+    return {
+      menus: [],
+    };
   },
   created() {
     this.getMenus();

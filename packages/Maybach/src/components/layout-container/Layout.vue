@@ -1,7 +1,7 @@
 <template>
   <div class="app-wrapper">
-    <!-- <Header />
-    <SideNav :menus="menus" /> -->
+    <Header />
+    <SideNav :menus="menuData" />
     <div class="main-container" :class="{ 'admin-box': isAdmin }">
       <slot></slot>
     </div>
@@ -9,11 +9,10 @@
 </template>
 
 <script lang="ts">
-import { VueClass } from "vue-class-component/lib/declarations";
 import { Vue, Component, Prop } from "vue-property-decorator";
 
-// import Header from "./header/Header.vue";
-// import SideNav from "./side-nav/SideNav.vue";
+import Header from "./header/Header.vue";
+import SideNav from "./side-nav/SideNav.vue";
 
 @Component({
   components: {
@@ -22,17 +21,25 @@ import { Vue, Component, Prop } from "vue-property-decorator";
   },
 })
 class Layout extends Vue {
-  @Prop(Number) readonly propA: number | undefined
   @Prop(Array) readonly menus!: any[];
-  @Prop(Boolean) readonly isAdmin: Boolean;
-  @Prop(String) readonly userParkId: String;
-  @Prop(Number) readonly fullLayout: 0 | 1;
+  @Prop(Boolean) readonly isAdmin: boolean = false;
+  @Prop(String) readonly userParkId!: string;
+  @Prop(Boolean) readonly fullLayout: boolean = false;
+
+  get parkId() {
+    return this.userParkId;
+  }
+
+  get menuData() {
+    console.log(this.menus);
+    return this.menus;
+  }
 }
 
 export default Layout;
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .app-wrapper {
   height: 100%;
   overflow: hidden;
@@ -59,5 +66,7 @@ export default Layout;
   background: #f2f6fa;
   overflow: hidden;
   flex-direction: column;
+  margin-left: 46px;
+  padding: 0 12px;
 }
 </style>

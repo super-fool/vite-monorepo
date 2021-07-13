@@ -3,35 +3,35 @@ export const oldCameraRouter = [
   {
     path: 'CameraAuditConfig',
     name: 'CameraAuditConfig',
-    component: () => import('@/views/camera/camera-config/index'),
+    component: () => import('@/views/camera/camera-config/index.vue'),
     meta: { title: '相机巡检配置' }
   },
   // 相机管理
   {
     path: 'CameraManage',
     name: 'CameraManage',
-    component: () => import('@/views/camera/camera-manage/index'),
+    component: () => import('@/views/camera/camera-manage/CameraManage.vue'),
     meta: { title: '高位相机管理' }
   },
   // 接收日志
   {
     path: 'CameraLogs',
     name: 'CameraLogs',
-    component: () => import('@/views/camera/camera-received-log/index'),
+    component: () => import('@/views/camera/camera-received-log/index.vue'),
     meta: { title: '高位相机接收日志' }
   },
   // 离线日志
   {
     path: 'CameraOffLineLog',
     name: 'CameraOffLineLog',
-    component: () => import('@/views/camera/camera-offline-log/CameraOffLineLog'),
+    component: () => import('@/views/camera/camera-offline-log/CameraOffLineLog.vue'),
     meta: { title: '相机离线日志' }
   },
   // 发送日志
   {
     path: 'PlatformSendLogs',
     name: 'PlatformSendLogs',
-    component: () => import('@/views/camera/platform-send-log/index'),
+    component: () => import('@/views/camera/platform-send-log/index.vue'),
     meta: { title: '硬件平台发送日志' }
   },
 ];
